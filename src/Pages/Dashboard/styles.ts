@@ -11,10 +11,14 @@ export const Container = styled.div`
 
 export const SideBar = styled.div`
   width: 200px;
-  height: 90vh;
+  min-height: 90vh;
   background: #282C31;
   border: 1px solid #4D4D4D;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
   img {
     width: 150px;
@@ -39,11 +43,23 @@ export const SideBar = styled.div`
       font-weight: 700;
     }
   }
+
+  div.settings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+
+    img {
+      margin-right: 15px;
+      width: 30px;
+    }
+  }
 `;
 
 export const Content = styled.div`
   width: 80%;
-  height: 90vh;
+  min-height: 90vh;
   background: #282C31;
   border: 1px solid #4D4D4D;
   border-radius: 10px;

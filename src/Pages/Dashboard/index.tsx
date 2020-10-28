@@ -34,8 +34,9 @@ import settings from '../../assets/settings.svg';
             </li>
           </ul>
         </div>
-        <div>
+        <div className="settings">
           <img src={settings} alt="Configurações"/>
+          <p>Configurações</p>
         </div>
       </SideBar>
       <Content />
