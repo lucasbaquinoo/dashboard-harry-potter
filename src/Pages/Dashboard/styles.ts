@@ -63,4 +63,39 @@ export const Content = styled.div`
   background: #282C31;
   border: 1px solid #4D4D4D;
   border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .graphs {
+    margin-top: 20px;
+    width: calc(100% - 100px);
+    flex: 1;
+    background: red;
+  }
+`;
+
+export const Card = styled.div`
+  width: calc(100% - 100px);
+  height: 250px;
+  background: red;
+  padding: 10px;
+  display: flex;
+
+  div + div {
+    margin-left: 20px;
+  }
+
+  div.smallCard {
+    width: 350px;
+    height: 100%;
+    background: green;
+  }
+
+  div.bigCard {
+    flex: 1;
+    height: 100%;
+    background: green;
+  }
 `;

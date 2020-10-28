@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, SideBar, Content } from './styles';
+import { Container, SideBar, Content, Card } from './styles';
 
 import logoHP from '../../assets/logoHP.png';
 import characters from '../../assets/characters.svg';
@@ -39,7 +39,14 @@ import settings from '../../assets/settings.svg';
           <p>Configurações</p>
         </div>
       </SideBar>
-      <Content />
+      <Content>
+          <Card>
+            <div className="smallCard"></div>
+            <div className="bigCard"></div>
+            <div className="smallCard"></div>
+          </Card>
+        <div className="graphs"></div>
+      </Content>
     </Container>
   );
 }
