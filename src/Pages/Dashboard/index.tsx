@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, SideBar, Content, Card } from './styles';
+import { Container, SideBar, Content, Card, Graphs } from './styles';
+
 
 import logoHP from '../../assets/logoHP.png';
 import characters from '../../assets/characters.svg';
@@ -40,12 +41,33 @@ import settings from '../../assets/settings.svg';
         </div>
       </SideBar>
       <Content>
-          <Card>
-            <div className="smallCard"></div>
-            <div className="bigCard"></div>
-            <div className="smallCard"></div>
-          </Card>
-        <div className="graphs"></div>
+        <Card>
+          <div className="smallCard">
+            <img src={characters} alt="Personagens"/>
+            <p>Personagens</p>
+            <span>36</span>
+          </div>
+
+          <div className="bigCard">
+            <img src={wand} alt="Personagens"/>
+            <p>Personagens</p>
+            <span>36</span>
+
+            <img src={spells} alt="Personagens"/>
+            <p>Personagens</p>
+            <span>36</span>
+          </div>
+
+          <div className="smallCard">
+            <img src={centaur} alt="Personagens"/>
+            <p>Personagens</p>
+            <span>36</span>
+          </div>
+        </Card>
+        <Graphs>
+          <div className="table"></div>
+          <div className="pizza"></div>
+        </Graphs>
       </Content>
     </Container>
   );
