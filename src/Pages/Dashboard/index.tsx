@@ -43,24 +43,40 @@ import settings from '../../assets/settings.svg';
       <Content>
         <Card>
           <div className="smallCard">
-            <img src={characters} alt="Personagens"/>
-            <p>Personagens</p>
+            <div className="contentCard">
+              <img src={characters} alt="Personagens"/>
+              <p>Personagens</p>
+            </div>
+
             <span>36</span>
           </div>
 
           <div className="bigCard">
-            <img src={wand} alt="Personagens"/>
-            <p>Personagens</p>
-            <span>36</span>
+            <div className="contentSideCard">
+              <div className="contentCard">
+                <img src={wand} alt="Personagens"/>
+                <p>Varinhas</p>
+              </div>
 
-            <img src={spells} alt="Personagens"/>
-            <p>Personagens</p>
-            <span>36</span>
+              <span>36</span>
+            </div>
+
+            <div className="contentSideCard">
+              <div className="contentCard">
+                <img src={spells} alt="Personagens"/>
+                <p>Feitiços</p>
+              </div>
+
+              <span>36</span>
+            </div>
           </div>
 
           <div className="smallCard">
-            <img src={centaur} alt="Personagens"/>
-            <p>Personagens</p>
+            <div className="contentCard">
+              <img src={centaur} alt="Personagens"/>
+              <p>Criaturas mágicas</p>
+            </div>
+
             <span>36</span>
           </div>
         </Card>

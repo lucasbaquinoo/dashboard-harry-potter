@@ -21,4 +21,14 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  ::-moz-selection {
+    color: #f7f7f7;
+    background: #efbe11;
+  }
+
+  ::selection {
+    color: #f7f7f7;
+    background: #efbe11;
+  }
 `;

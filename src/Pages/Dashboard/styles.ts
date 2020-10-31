@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const SideBar = styled.div`
-  width: 200px;
+  width: 250px;
   min-height: 90vh;
   border: 1px solid #4D4D4D;
   border-radius: 10px;
@@ -37,22 +37,34 @@ export const SideBar = styled.div`
 
   ul {
     list-style: none;
+    cursor: pointer;
 
     li {
+      padding: 10px;
+      border: 0.01rem solid transparent;
       margin-bottom: 50px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      transition: .2s ease-in-out;
+
+      &:hover p {
+        color: #efbe11;
+      }
+
+      img {
+        width: 46px;
+        padding: 5px;
+        transition: color 4s;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 5px;
+      }
     }
 
-    img {
-      width: 46px;
-    }
-
-    p {
-      margin-top: 30px;
-      font-weight: 700;
-    }
   }
 
   div.settings {
@@ -61,9 +73,16 @@ export const SideBar = styled.div`
     align-items: center;
     font-weight: 700;
 
+    cursor: pointer;
+
+    &:hover img {
+      transform: rotate(220deg);
+    }
+
     img {
       margin-right: 15px;
       width: 30px;
+      transition: transform 2s;
     }
   }
 `;
@@ -100,12 +119,14 @@ export const Card = styled.div`
       -webkit-backdrop-filter: blur(30px);
       backdrop-filter: blur(30px);
       background-color: transparent;
-      border: 0.3rem solid rgba(230, 237, 28, 0.2);
-      transition: .2s;
+      transition: border-radius 1s;
+      border-radius: 2rem;
+      border: 1px solid #4D4D4D;
     }
 
     div:hover {
-      border: 0.1rem solid rgba(230, 237, 28, 0.2);
+      border-radius: 0;
+      border: 1px solid #efbe11;
     }
   }
 
@@ -116,21 +137,84 @@ export const Card = styled.div`
   div.smallCard {
     width: 350px;
     height: 100%;
-    border-radius: 1rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    div.contentCard {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 0;
+
+      img {
+        margin: 20px 0;
+        flex: 1;
+      }
+
+      p {
+        font-size: 20px;
+        margin: 20px 0;
+      }
+    }
+
+    span {
+      margin-bottom: 20px;
+      font-size: 70px;
+      font-weight: 700;
+      color: #efbe11;
+    }
   }
 
   div.bigCard {
     flex: 1;
     height: 100%;
-    border-radius: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+
+    div.contentSideCard {
+      height: 100%;
+      flex: 1;
+      margin: 0;
+      border-radius: 0;
+
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-around;
+
+      div.contentCard {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 0;
+
+        img {
+          margin: 20px 0;
+          flex: 1;
+        }
+
+        p {
+          font-size: 20px;
+          margin: 20px 0;
+        }
+      }
+
+      span {
+      margin-bottom: 20px;
+      font-size: 70px;
+      font-weight: 700;
+      color: #efbe11;
+    }
+    }
   }
 `;
 
@@ -149,12 +233,13 @@ export const Graphs = styled.div`
       -webkit-backdrop-filter: blur(30px);
       backdrop-filter: blur(30px);
       background-color: transparent;
-      border: 0.3rem solid rgba(230, 237, 28, 0.2);
-      transition: .2s;
+      transition: .2s ease-in;
+      border-radius: 1rem;
+      border: 1px solid #4D4D4D;
     }
 
     div:hover {
-      border: 0.1rem solid rgba(230, 237, 28, 0.2);
+      border-radius: 0;
     }
   }
 
@@ -165,12 +250,11 @@ export const Graphs = styled.div`
   div.table {
     flex: 1;
     height: 480px;
-    /* background: green; */
+    display: flex;
   }
 
   div.pizza {
     width: 350px;
     height: 480px;
-    /* background: green; */
   }
 `;
